@@ -75,14 +75,6 @@ REM Firewall
 netsh advfirewall set allprofiles state on
 
 
-REM User Txt Doc Creation
-
-cd Documents 
-    copy NUL Users.txt
-    notepad Users.txt
-cd..
-
-
 REM Telnet
 
 DISM /online /disable-feature /featurename:TelnetClient
@@ -173,3 +165,10 @@ REM Windows Scan
 cd C:\ProgramData\Microsoft\Windows Defender\Platform\4*
 mpcmdrun -scan -scantype 2
 
+
+REM User Txt Doc Creation
+
+cd Documents 
+    copy NUL Users.txt
+    notepad Users.txt
+cd..

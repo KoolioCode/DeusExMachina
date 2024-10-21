@@ -162,3 +162,11 @@ choco uninstall flashplayerplugin -y
 choco install malwarebytes -y 
 choco install kb3035131 -y
 choco install kb3063858 -y
+
+
+REM Update windows
+
+wuauclt /detectnow
+wuauclt /updatenow
+wuauclt /detectnow /updatenow
+

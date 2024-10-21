@@ -172,3 +172,5 @@ cd Documents
     copy NUL Users.txt
     notepad Users.txt
 cd..
+
+pause

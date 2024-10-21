@@ -147,30 +147,4 @@ $SecPool.'System Access'.MinimumPasswordAge = 60
 
 Set-SecPol -Object $SecPool -CfgFile C:\Test\Test.cfg
 
-
-REM Chocolatey Manage Programs
-
-choco uninstall flashplayerplugin -y
-choco uninstall wireshark -y
-choco install firefox -y
-choco install googlechrome -y
-choco install inkscape -y
-choco install malwarebytes -y 
-choco install kb3035131 -y
-choco install kb3063858 -y
-
-
-REM Windows Scan
-
-cd C:\ProgramData\Microsoft\Windows Defender\Platform\4*
-mpcmdrun -scan -scantype 2
-
-
-REM User Txt Doc Creation
-
-cd Documents 
-    copy NUL Users.txt
-    notepad Users.txt
-cd..
-
 pause

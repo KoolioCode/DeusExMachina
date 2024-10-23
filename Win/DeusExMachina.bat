@@ -340,3 +340,5 @@ cd Documents
 cd..
 
 pause
+
+echo as;klf;skla

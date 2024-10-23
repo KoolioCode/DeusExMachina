@@ -46,8 +46,6 @@ echo Do not run until on MPS Systems.
 
 echo Script will repeat until closed.
 
-echo Script will repeat until closed.
-
 read -p "Press enter to continue"
 
 unalias -a #Get rid of aliases

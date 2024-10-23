@@ -52,7 +52,7 @@ unalias -a #Get rid of aliases
 echo "unalias -a" >> ~/.bashrc
 echo "unalias -a" >> /root/.bashrc
 PWDthi=$(pwd)
-if [ ! -d $PWDthi/referenceFiles ]; then
+if [ ! -d $PWDthi/Ref ]; then
 	echo "Please Cd into this script's directory"
 	exit
 fi
@@ -183,14 +183,14 @@ fileSecFun(){
 	echo root >> /tmp/listofusers
 	
 	#Replace sources.list with safe reference file (For Ubuntu 14 Only)
-	cat $PWDthi/referenceFiles/sources.list > /etc/apt/sources.list
+	cat $PWDthi/Ref/sources.list > /etc/apt/sources.list
 	apt-get update
 
 	#Replace lightdm.conf with safe reference file
-	cat $PWDthi/referenceFiles/lightdm.conf > /etc/lightdm/lightdm.conf
+	cat $PWDthi/Ref/lightdm.conf > /etc/lightdm/lightdm.conf
 
 	#Replace sshd_config with safe reference file
-	cat $PWDthi/referenceFiles/sshd_config > /etc/ssh/sshd_config
+	cat $PWDthi/Ref/sshd_config > /etc/ssh/sshd_config
 	/usr/sbin/sshd -t
 	systemctl restart sshd.service
 

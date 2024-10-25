@@ -260,11 +260,6 @@ net accounts /maxpwage:30
 net accounts /minpwage:5
 
 
-REM SFC Scan
-
-Sfc.exe /scannow
-
-
 REM Windows Updates
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update" /v AUOptions /t REG_DWORD /d 3 /f
